@@ -2,21 +2,41 @@ body {
     text-align: center;
     background-color: pink;
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
 }
-h1 {
-    color: red;
-    font-size: 50px;
+
+.container {
+    text-align: center;
 }
-p {
-    font-size: 20px;
+
+button {
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
 }
+
+button:hover {
+    background-color: darkred;
+}
+
 .heart {
+    position: absolute;
     color: red;
-    font-size: 40px;
-    animation: heartbeat 1s infinite;
+    font-size: 30px;
+    animation: float 2s ease-out forwards;
 }
-@keyframes heartbeat {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+
+@keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
 }
