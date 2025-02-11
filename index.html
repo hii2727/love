@@ -7,9 +7,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>情人节快乐！❤️</h1>
-    <p>愿你的每一天都充满爱和幸福！</p>
-    <p class="heart">💖💖💖</p>
+    <div class="container">
+        <h1>情人节快乐！❤️</h1>
+        <p>愿你的每一天都充满爱和幸福！</p>
+        <button id="loveButton">点击我 💕</button>
+        <div id="heartsContainer"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
+CSS (styles.css)
+css
+Copy
+Edit
+body {
+    text-align: center;
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 30px;
+    animation: float 2s ease-out forwards;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
+}
